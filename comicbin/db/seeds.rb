@@ -11,6 +11,9 @@ comics.each do |comic_data|
 	c = Comic.new
 	c.title = comic_data["title"]
 	c.description = comic_data["description"]
+	if c.description == nil #needed because of validation
+		c.description = "No Description Provided"
+	end
 	c.image_url = comic_data["thumbnail"]["path"] + '.' + comic_data["thumbnail"]["extension"]
 	c.save
 end
