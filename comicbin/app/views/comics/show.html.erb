@@ -2,9 +2,13 @@
   <div class='col-md-5'>
     <%= image_tag @comic.image_url, {:class => "image-responsive", size: "342x455"} %>
   </div>
+
   <div class='col-md-7'>
     <h1><%= @comic.title %></h1>
     <h4><%= @comic.description %></h4>
     <%= link_to 'Delete Comic', destroy_path(@comic), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
   </div>
+  
 </div>
+
+  <%= link_to "Back to all comics", comics_path %>

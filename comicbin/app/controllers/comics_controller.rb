@@ -23,10 +23,7 @@ class ComicsController < ApplicationController
     end
 		
 	end
-
-	def edit
-	end
-
+	
 	def show
 		id = params["id"]
 		@comic = Comic.find_by(id: id)
