@@ -23,6 +23,10 @@ h1.logo {
   font-family: Oswald, sans-serif;
   letter-spacing: -1px;
   margin-bottom: 12px;
+  a{
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 .add {
